@@ -10,6 +10,16 @@
             color: white; /* Text color */
             padding: 10px 20px; /* Padding around the button */
         }
+
+        /* Styling for the centered text */
+        .centered-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 24px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -21,10 +31,21 @@
             document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById("hidden-button").style.display = "block";
             });
+        } else {
+            // Otherwise, hide the button and show the centered text
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("hidden-button").style.display = "none";
+                document.getElementById("centered-text").style.display = "flex";
+            });
         }
     </script>
     
     <!-- The button element -->
     <button id="hidden-button" class="hidden-button">My Button</button>
+
+    <!-- Centered text when the button is hidden -->
+    <div id="centered-text" class="centered-text">
+        Hello Notion
+    </div>
 </body>
 </html>
