@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Styling for the button */
+        .hidden-button {
+            display: none; /* Initially hide the button */
+            border-radius: 10px; /* Smooth corners */
+            background-color: blue; /* Blue background color */
+            color: white; /* Text color */
+            padding: 10px 20px; /* Padding around the button */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Check if the current date is 28th April
+        var currentDate = new Date();
+        if (currentDate.getDate() === 28 && currentDate.getMonth() === 3) { // Months are zero-indexed, so April is 3
+            // If it's 28th April, show the button
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("hidden-button").style.display = "block";
+            });
+        }
+    </script>
+    
+    <!-- The button element -->
+    <button id="hidden-button" class="hidden-button">My Button</button>
+</body>
+</html>
